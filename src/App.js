@@ -3,11 +3,11 @@ import Homepage from "./Homepage";
 import "./App.css";
 import { firstHomepage, secondHomepage, thirdHomepage } from "./homepages";
 import Login from "./login";
-import fire from "./fire.js";
-import Toppage from "./toppage.js";
-import Search from "./search.js";
-import Product from "./product.js";
-import Hero from "./hero.js";
+import fire from "./fire";
+import Toppage from "./toppage";
+import Search from "./search";
+import Product from "./product";
+import Hero from "./hero";
 
 const App = () => {
   const [user, setUser] = useState("");

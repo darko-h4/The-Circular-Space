@@ -12,7 +12,7 @@ function Homepage(props) {
             <title>{props.title}</title>
             <h3>{props.subtitle}</h3>
             <img src={props.image} />
-            <par>{props.description}</par>
+            <div>{props.description}</div>
             <button type='button' onClick={SwipePage}>Next</button>
         </article>
     )
