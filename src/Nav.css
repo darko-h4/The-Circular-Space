@@ -12,7 +12,7 @@
 
 .navbar-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   height: 80px;
   max-width: 1500px;
@@ -26,13 +26,20 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto,3);
+  grid-gap: 0px;
   list-style: none;
+  z-index: 2;
+  background-color: aquamarine;
+  position: absolute;
   text-align: center;
   width: 60vw;
   justify-content: end;
-  margin-right: 2rem;
+  justify-self: flex-end;
+}
+
+.hidden{
+  display:none;
 }
 
 .nav-item {
@@ -54,7 +61,12 @@
 }
 
 .fa-bars {
-  color: #fff;
+  color: black;
+}
+
+.fa-times {
+  z-index: 1;
+  position: relative;
 }
 
 .nav-links-mobile {

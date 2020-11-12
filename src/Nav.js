@@ -10,11 +10,13 @@ function Nav(){
 
     return (
     <nav className="navbar">
+        
         <div className="navbar-container">
         <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'}/> 
         </div>
-        <ul className={click ? 'nac-menu active' : 'nav-menu'}>
+        </div>
+        <ul className={click ? 'nav-menu' : 'nav-menu hidden'}>
             <li className='nav-item'>
                 <Link to='/profile' className='nav-links' onClick={closeNavMenu}>
                     Profile Page
@@ -31,7 +33,6 @@ function Nav(){
                 </Link>
             </li>
         </ul>
-        </div>
     </nav>
     );
 }
