@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
-import Homepage from "./Homepage";
 import "./App.css";
-import { firstHomepage, secondHomepage, thirdHomepage } from "./homepages";
 import Login from "./login";
 import fire from "./fire.js";
 import Toppage from "./toppage.js";
 import Search from "./search.js";
 import Product from "./product.js";
 import Hero from "./hero.js";
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Nav from './Nav'; 
+import {Onboarding1} from "./pages/Onboarding1";
+import {Onboarding2} from "./pages/Onboarding2";
+import {Onboarding3} from "./pages/Onboarding3";
+
+
+
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -83,41 +89,16 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <div>
-        <Homepage
-          title={firstHomepage.title}
-          subtitle={firstHomepage.subtitle}
-          img={firstHomepage.img}
-          description={firstHomepage.description}
-        />
-
-        <Homepage
-          title={secondHomepage.title}
-          subtitle={secondHomepage.subtitle}
-          img={secondHomepage.img}
-          description={secondHomepage.description}
-        />
-
-        <Homepage
-          title={thirdHomepage.title}
-          subtitle={thirdHomepage.subtitle}
-          img={thirdHomepage.img}
-          description={thirdHomepage.description}
-        />
-      </div>
-
-      <div>
-        <Toppage />
-      </div>
-
-      <div>
-        <Search />
-      </div>
-
-      <div>
-        <Product />
-      </div>
+      <Router>
+        <Nav/>
+        <Switch>
+        <Route path="/" exact component={Onboarding1} />
+        <Route path="/onboarding2" component={Onboarding2} />
+        <Route path="/onboarding3" component={Onboarding3}/>
+        <Route path="/toppage" component={Toppage} />
+        <Route path="/search" component={Search} />
+        <Route path="/product" component={Product} />
+        <Route path="/login" component={Login} />
 
       <div className="Login">
         {user ? (
@@ -137,7 +118,8 @@ const App = () => {
           />
         )}
       </div>
-    </div>
+      </Switch>
+      </Router>
   );
 };
 

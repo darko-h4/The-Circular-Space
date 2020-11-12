@@ -1,4 +1,4 @@
-export const firstHomepage = {
+/*export const firstHomepage = {
   
     id: 1,
     title: '1. Benefits',
@@ -24,3 +24,4 @@ export const thirdHomepage = {
     img: '',
     description: 'Do you want to gain more points, and do you have any products catching dust? Give them away or lend them out. Upload some details about your item, decide the amount of points you would like to receive and lend it out, easy as that!'
 }
+*/
