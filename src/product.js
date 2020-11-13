@@ -1,15 +1,13 @@
 import React from "react";
-import "./productcard.css";
+import "./App.css";
 
 const Product = () => {
   return (
     <div className="productcard">
-      <img src="" alt="" />
-      <h2 className="h2">
-        title <br />
-        points
-      </h2>
-      <p className="p">Location, Availability</p>
+      <img className="productimage" src="" alt="" />
+      <h2> title </h2>
+      <h4> points </h4>
+      <p>Location, Availability</p>
     </div>
   );
 };

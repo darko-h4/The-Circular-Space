@@ -6,7 +6,7 @@ const Toppage = () => {
     <div>
       <div className="toppage">
         <h1>Products</h1>
-        <button className="refresh-button">Refresh</button>
+        <button>Refresh</button>
       </div>
     </div>
   );

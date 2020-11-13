@@ -1,5 +1,94 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla&family=Roboto+Mono:wght@300&family=Tajawal&display=swap");
 
+.homepage {
+  width: 280px;
+}
+
+/* Headers on top of pages*/
+h1 {
+  font-family: Karla;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: -0.5px;
+  color: darkblue;
+}
+
+/* Largest text; subheaders, product titles */
+h2 {
+  font-family: Karla;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+/* Second largest text black, bigger paragraphs  */
+h3 {
+  font-family: Tajawal;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+/* Largest text green, INDICATION FOR POINTS  */
+h4 {
+  font-family: Tajawal;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #227570;
+}
+
+/* paragraph text, used for larger paragraphs */
+p {
+  font-family: Tajawal;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+/* for the productcard */
+.productcard {
+  position: relative;
+  width: 330px;
+  height: 130px;
+  background: #ebf3ff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+img.productimage {
+  border-radius: 12.9676px;
+  color: black;
+}
+
+/*for the user profile page card */
+.usercard {
+  width: 331px;
+  height: 227px;
+  left: 22px;
+  top: 137px;
+  background: #fff3ea;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+img.profilepicture {
+  width: 174px;
+  height: 132px;
+  left: 100px;
+  top: 156px;
+  background: black;
+  border-radius: 10.9783px;
+}
+
 .toppage {
   width: 300px;
   display: flex;
@@ -33,7 +122,7 @@
 }
 
 .search-button {
-  background: orange;
+  background: #ff7008;
   border: none;
   padding: 10px 20px;
   color: white;
@@ -44,49 +133,64 @@
   border-radius: 8px;
 }
 
-.toppage h1 {
-  font-family: Karla;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 32px;
-  letter-spacing: -0.5px;
-  color: darkblue;
-}
-
 .login {
   margin-top: 100px;
 }
 
 /* LOGIN CSS BELOW */
 button {
+  margin-top: 20px;
+  width: auto;
   border: none;
-  width: 118px;
-  border-radius: 4px;
-  padding: 15px 0;
+  border-radius: 8px;
+  padding: 12px;
   color: #fff;
   font-size: 16px;
   letter-spacing: 1px;
   background: #2e2cc6;
   cursor: pointer;
+  font-family: Karla;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.login {
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 20px;
-  background: #e9e9e9;
+button.login {
+  margin-top: 5px;
+  width: 191px;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: #2e2cc6;
+  cursor: pointer;
+  font-family: Karla;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
   display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+button.google {
+  margin-top: 40px;
+  background-color: white;
+  padding: 0px;
 }
 
 .login .loginContainer {
-  padding: 60px;
   margin: auto;
-  width: 100%;
-  max-width: 520px;
-  min-height: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 300px;
   background: white;
 }
 
@@ -101,26 +205,28 @@ button {
 
 .login .loginContainer input {
   width: 100%;
-  border: none;
+  border-color: #2e2cc6;
   outline: none;
   font-size: 19px;
   padding: 10px;
-  background: #2e2cc6;
-  color: #fff;
+  color: #2e2cc6;
+  font: Karla;
+  font-size: 16px;
   letter-spacing: 1px;
+  border-radius: 8px;
 }
 
 .login .loginContainer .btnContainer {
   width: 100%;
-  padding: 24px 0;
+  padding: 0px 0;
 }
 
 .login .loginContainer .btnContainer p {
-  margin: 14px 0 0 0;
   font-family: Karla;
   font-size: 16px;
-  text-align: right;
+  text-align: center;
   color: #ff7008;
+  margin-top: 20px;
 }
 
 .login .loginContainer .btnContainer p span {
@@ -132,6 +238,7 @@ button {
   margin-left: 5px;
   cursor: pointer;
   transition: all 400ms ease-in-out;
+  margin-top: 20px;
 }
 
 .login .loginContainer .btnContainer p span:hover {
@@ -144,12 +251,10 @@ button {
 }
 
 .hero {
-  width: 100%;
   min-height: 100vh;
 }
 
 .hero nav {
-  width: 100%;
   padding: 20px 40px;
   display: flex;
   align-items: center;

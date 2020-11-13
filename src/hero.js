@@ -1,5 +1,7 @@
 import React from "react";
 
+//toppage of the page after login, will be raplaced by header
+
 const Hero = ({ handleLogout }) => {
   return (
     <section className="hero">
