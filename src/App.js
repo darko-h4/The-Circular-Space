@@ -4,9 +4,7 @@ import "./App.css";
 import { firstHomepage, secondHomepage, thirdHomepage } from "./homepages";
 import Login from "./login";
 import fire from "./fire";
-import Toppage from "./toppage";
-import Search from "./search";
-import Product from "./product";
+import ProductPage from "./productPage";
 import Hero from "./hero";
 
 const App = () => {
@@ -108,15 +106,7 @@ const App = () => {
       </div>
 
       <div>
-        <Toppage />
-      </div>
-
-      <div>
-        <Search />
-      </div>
-
-      <div>
-        <Product />
+        <ProductPage />
       </div>
 
       <div className="Login">

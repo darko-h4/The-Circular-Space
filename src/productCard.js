@@ -1,7 +1,6 @@
 import React from "react";
-import "./productcard.css";
 
-const Product = () => {
+const ProductCard = () => {
   return (
     <div className="productcard">
       <img src="" alt="" />
@@ -14,4 +13,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default ProductCard;
