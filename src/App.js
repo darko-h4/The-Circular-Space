@@ -3,9 +3,12 @@ import Homepage from "./Homepage";
 import "./App.css";
 import { firstHomepage, secondHomepage, thirdHomepage } from "./homepages";
 import Login from "./login";
-import fire from "./fire";
-import ProductPage from "./productPage";
-import Hero from "./hero";
+import fire from "./fire.js";
+import Toppage from "./toppage.js";
+import Search from "./search.js";
+import Product from "./product.js";
+import Hero from "./hero.js";
+import Profile from "./profile.js";
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -22,7 +25,7 @@ const App = () => {
 
   const clearErrors = () => {
     setEmailError("");
-    setPasswordError("");
+    setPasswordError("Please enter at least 6 characters");
   };
 
   const handleLogin = () => {
@@ -126,6 +129,10 @@ const App = () => {
             passwordError={passwordError}
           />
         )}
+      </div>
+
+      <div>
+        <Profile />
       </div>
     </div>
   );

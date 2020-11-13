@@ -1,4 +1,6 @@
-import firebase from "firebase";
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
 
 //default firebase used to test login
 var firebaseConfig = {
@@ -11,6 +13,6 @@ var firebaseConfig = {
   appId: "1:832964385063:web:205b2536dd64fd438fb102",
 };
 
-const fire = firebase.initializeApp(firebaseConfig);
+export const fire = firebase.initializeApp(firebaseConfig);
 
 export default fire;

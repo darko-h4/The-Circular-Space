@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import signInWithGoogle from "./provider";
+import googlelogo from "./googlesignin.png";
 
 const Login = (props) => {
   const {
@@ -17,6 +19,8 @@ const Login = (props) => {
 
   return (
     <section className="login">
+      <h1>Welcome!</h1>
+      <h3>Please login or sign up to continue</h3>
       <div className="loginContainer">
         <label>Username</label>
         <input
@@ -27,6 +31,7 @@ const Login = (props) => {
           onChange={(e) => setEmail(e.target.value)}
         />
         <p className="errorMsg">{emailError}</p>
+
         <label>Password</label>
         <input
           type="password"
@@ -39,19 +44,31 @@ const Login = (props) => {
         <div className="btnContainer">
           {hasAccount ? (
             <>
-              <button onClick={handleLogin}>Log In</button>
               <p>
-                Don't have an account?{" "}
-                <span onClick={() => setHasAccount(!hasAccount)}>Sign Up</span>
+                <span onClick={() => setHasAccount(!hasAccount)}>
+                  Sign up for new account!
+                </span>
               </p>
+              <button onClick={signInWithGoogle} className="google">
+                <img src={googlelogo} width="191" height="46"></img>
+              </button>
+              <button onClick={handleLogin} className="login">
+                Log In
+              </button>
             </>
           ) : (
             <>
-              <button onClick={handleSignup}>Sign up</button>
               <p>
-                Have an account?
-                <span onClick={() => setHasAccount(!hasAccount)}> Log In </span>
+                <span onClick={() => setHasAccount(!hasAccount)}>
+                  I already have an account!
+                </span>
               </p>
+              <button onClick={signInWithGoogle} className="google">
+                <img src={googlelogo} width="191" height="46"></img>
+              </button>
+              <button onClick={handleSignup} className="login">
+                Sign up
+              </button>
             </>
           )}
         </div>
