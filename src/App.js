@@ -1,57 +1,141 @@
-import React from 'react';
-import Homepage from './Homepage';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Homepage from "./Homepage";
+import "./App.css";
+import { firstHomepage, secondHomepage, thirdHomepage } from "./homepages";
+import Login from "./login";
+import fire from "./fire.js";
+import Toppage from "./toppage.js";
+import Search from "./search.js";
+import Product from "./product.js";
+import Hero from "./hero.js";
+import Profile from "./profile.js";
 
+const App = () => {
+  const [user, setUser] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [hasAccount, setHasAccount] = useState(false);
 
-const firstHomepage = {
+  const clearInput = () => {
+    setEmail("");
+    setPassword("");
+  };
 
-  title: '1. Benefits',
-  subtitle: 'Why sharing is caring',
-  img: '',
-  description: 'Are you keen on providing a circular space for your products? This platform will allow you to borrow, give away and lend out items for free!'
-}
+  const clearErrors = () => {
+    setEmailError("");
+    setPasswordError("Please enter at least 6 characters");
+  };
 
-const secondHomepage = {
+  const handleLogin = () => {
+    clearErrors();
+    fire
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .catch((err) => {
+        switch (err.code) {
+          case "auth/email-already-in-use":
+          case "auth/invalid-email":
+            setEmailError(err.message);
+            break;
+          case "auth/weak-password":
+            setPasswordError(err.message);
+            break;
+        }
+      });
+  };
 
-  title: '2. Borrow Items',
-  subtitle: 'How to borrow items',
-  img: '',
-  description: 'You get 100 points for free when you create your account. You can use the points to borrow items for a chosen period of time! Just find the product you want, check the availability of the lender and click the ‘borrow item’ button!'
-}
+  const handleSignup = () => {
+    clearErrors();
+    fire
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .catch((err) => {
+        switch (err.code) {
+          case "auth/invalid-email":
+          case "auth/user-disabled":
+            setEmailError(err.message);
+            break;
+          case "auth/wrong-password":
+            setPasswordError(err.message);
+            break;
+        }
+      });
+  };
 
-const thirdHomepage = {
+  const handleLogout = () => {
+    fire.auth().signOut();
+  };
 
-  title: '3. Lend Out Items',
-  subtitle: 'How to lend out items',
-  img: '',
-  description: 'Do you want to gain more points, and do you have any products catching dust? Give them away or lend them out. Upload some details about your item, decide the amount of points you would like to receive and lend it out, easy as that!'
-}
+  const authListener = () => {
+    fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        clearInput();
+        setUser(user);
+      } else {
+        setUser("");
+      }
+    });
+  };
 
-function App() {
+  useEffect(() => {
+    authListener();
+  }, []);
+
   return (
     <div>
-      <Homepage 
-      title={firstHomepage.title}
-      subtitle={firstHomepage.subtitle}
-      img={firstHomepage.img}
-      description={firstHomepage.description}
-      />
+      <div>
+        <Homepage
+          title={firstHomepage.title}
+          subtitle={firstHomepage.subtitle}
+          img={firstHomepage.img}
+          description={firstHomepage.description}
+        />
 
-      <Homepage 
-      title={secondHomepage.title}
-      subtitle={secondHomepage.subtitle}
-      img={secondHomepage.img}
-      description={secondHomepage.description}
-      />
+        <Homepage
+          title={secondHomepage.title}
+          subtitle={secondHomepage.subtitle}
+          img={secondHomepage.img}
+          description={secondHomepage.description}
+        />
 
-      <Homepage 
-      title={thirdHomepage.title}
-      subtitle={thirdHomepage.subtitle}
-      img={thirdHomepage.img}
-      description={thirdHomepage.description}
-      />
+        <Homepage
+          title={thirdHomepage.title}
+          subtitle={thirdHomepage.subtitle}
+          img={thirdHomepage.img}
+          description={thirdHomepage.description}
+        />
+      </div>
+
+      <div>
+        <ProductPage />
+      </div>
+
+      <div className="Login">
+        {user ? (
+          <Hero handleLogout={handleLogout} />
+        ) : (
+          <Login
+            email={email}
+            setEmail={setEmail}
+            password={password}
+            setPassword={setPassword}
+            handleLogin={handleLogin}
+            handleSignup={handleSignup}
+            hasAccount={hasAccount}
+            setHasAccount={setHasAccount}
+            emailError={emailError}
+            passwordError={passwordError}
+          />
+        )}
+      </div>
+
+      <div>
+        <Profile />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
