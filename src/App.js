@@ -6,9 +6,12 @@ import Login from "./login";
 import fire from "./fire.js";
 import Toppage from "./toppage.js";
 import Search from "./search.js";
-import Product from "./product.js";
 import Hero from "./hero.js";
 import Profile from "./profile.js";
+import ProductPage from "./productPage";
+import AddItemPage from"./AddItemPage";
+import AddMoreDetailsPage from"./AddMoreDetailsPage";
+
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -62,6 +65,7 @@ const App = () => {
             break;
         }
       });
+
   };
 
   const handleLogout = () => {
@@ -134,6 +138,17 @@ const App = () => {
       <div>
         <Profile />
       </div>
+
+      <div>
+       <AddItemPage
+       />
+      </div>
+
+      <div>
+       <AddMoreDetailsPage
+       />
+      </div>
+      
     </div>
   );
 };
