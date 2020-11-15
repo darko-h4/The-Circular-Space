@@ -322,3 +322,8 @@ button.google {
 
   border-radius: 12.9676px;
 }
+
+.dropdownSizings {
+  margin: left;
+  width: 300px;
+}
