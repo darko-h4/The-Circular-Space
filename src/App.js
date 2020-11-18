@@ -8,9 +8,7 @@ import Product from "./product.js";
 import Hero from "./hero.js";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Nav from './Nav'; 
-import {Onboarding1} from "./pages/Onboarding1";
-import {Onboarding2} from "./pages/Onboarding2";
-import {Onboarding3} from "./pages/Onboarding3";
+import {Benefits, Borrow, Lend} from "./Onboarding";
 
 
 
@@ -92,9 +90,9 @@ const App = () => {
       <Router>
         <Nav/>
         <Switch>
-        <Route path="/" exact component={Onboarding1} />
-        <Route path="/onboarding2" component={Onboarding2} />
-        <Route path="/onboarding3" component={Onboarding3}/>
+        <Route path="/" exact component={Benefits} />
+        <Route path="/onboarding2" component={Borrow} />
+        <Route path="/onboarding3" component={Lend}/>
         <Route path="/toppage" component={Toppage} />
         <Route path="/search" component={Search} />
         <Route path="/product" component={Product} />
