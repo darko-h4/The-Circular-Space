@@ -1,0 +1,96 @@
+
+button {
+    border: none;
+    width: 118px;
+    border-radius: 4px;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: #2e2cc6;
+    cursor: pointer;
+  }
+
+.login .loginContainer .btnContainer {
+    width: 100%;
+    padding: 24px 0;
+  }
+
+  .login .logingContainer .btnContainer r{
+      width: 100%;
+      padding: 45px 0;
+      margin: 14px 0 0 0;
+  }
+  
+  .login .loginContainer .btnContainer p {
+    margin: 14px 0 0 0;
+    font-family: Karla;
+    font-size: 16px;
+    text-align: right;
+    color: #ff7008;
+  }
+  
+  .login .loginContainer .btnContainer p span {
+    color: #2e2cc6;
+    font-weight: bold;
+    font-family: Karla;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+  }
+  
+  .login .loginContainer .btnContainer p span:hover {
+    color: #ff7008;
+  }
+  
+  .login {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 20px;
+    background: #e9e9e9;
+    display: flex;
+  }
+  
+  .login .loginContainer {
+    padding: 60px;
+    margin: auto;
+    width: 100%;
+    max-width: 520px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+  }
+
+  .hero {
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .hero nav {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .hero nav h2 {
+    color: #ff7008;
+    background: white;
+  }
+  
+  .hero nav button {
+    border: none;
+    width: 118px;
+    border-radius: 4px;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: #2e2cc6;
+    cursor: pointer;
+  }

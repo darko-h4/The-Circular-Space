@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Homepage from "./Homepage";
 import "./App.css";
-import { firstHomepage, secondHomepage, thirdHomepage } from "./homepages";
 import Login from "./login";
 import fire from "./fire.js";
 import Toppage from "./toppage.js";
@@ -11,6 +9,11 @@ import Profile from "./profile.js";
 import ProductPage from "./productPage";
 import AddItemPage from"./AddItemPage";
 import AddMoreDetailsPage from"./AddMoreDetailsPage";
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Nav from './Nav'; 
+import {Benefits, Borrow, Lend} from "./Onboarding";
+
+
 
 
 const App = () => {
@@ -88,33 +91,16 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <div>
-        <Homepage
-          title={firstHomepage.title}
-          subtitle={firstHomepage.subtitle}
-          img={firstHomepage.img}
-          description={firstHomepage.description}
-        />
-
-        <Homepage
-          title={secondHomepage.title}
-          subtitle={secondHomepage.subtitle}
-          img={secondHomepage.img}
-          description={secondHomepage.description}
-        />
-
-        <Homepage
-          title={thirdHomepage.title}
-          subtitle={thirdHomepage.subtitle}
-          img={thirdHomepage.img}
-          description={thirdHomepage.description}
-        />
-      </div>
-
-      <div>
-        <ProductPage />
-      </div>
+      <Router>
+        <Nav/>
+        <Switch>
+        <Route path="/" exact component={Benefits} />
+        <Route path="/onboarding2" component={Borrow} />
+        <Route path="/onboarding3" component={Lend}/>
+        <Route path="/toppage" component={Toppage} />
+        <Route path="/search" component={Search} />
+        <Route path="/product" component={Product} />
+        <Route path="/login" component={Login} />
 
       <div className="Login">
         {user ? (
@@ -148,8 +134,8 @@ const App = () => {
        <AddMoreDetailsPage
        />
       </div>
-      
-    </div>
+      </Switch>
+    </Router>
   );
 };
 
