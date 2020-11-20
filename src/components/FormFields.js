@@ -27,3 +27,4 @@ export const LocationForm = () => (
     </Form.Field>
   </Form>
 )
+

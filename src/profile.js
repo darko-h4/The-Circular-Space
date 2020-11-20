@@ -1,7 +1,8 @@
 //profilepage of user
 
 import React from "react";
-import Product from "./product.js";
+import ProductProfile from "./productProfile.js";
+import {Link} from "react-router-dom";
 
 const Profile = () => {
   return (
@@ -12,9 +13,9 @@ const Profile = () => {
         <h4>Points</h4>
         <p>Location</p>
       </div>
-      <button>Add new item</button>
+      <Link to="/additem"> 
+      <button>Add new item</button></Link>
       <div>
-        <Product />
       </div>
     </div>
   );

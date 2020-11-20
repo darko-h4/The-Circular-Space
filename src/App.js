@@ -14,8 +14,6 @@ import Nav from './Nav';
 import {Benefits, Borrow, Lend} from "./Onboarding";
 
 
-
-
 const App = () => {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
@@ -95,12 +93,15 @@ const App = () => {
         <Nav/>
         <Switch>
         <Route path="/" exact component={Benefits} />
-        <Route path="/onboarding2" component={Borrow} />
-        <Route path="/onboarding3" component={Lend}/>
+        <Route path="/borrow" component={Borrow} />
+        <Route path="/lend" component={Lend}/>
         <Route path="/toppage" component={Toppage} />
-        <Route path="/search" component={Search} />
-        <Route path="/product" component={Product} />
         <Route path="/login" component={Login} />
+        <Route path="/productpage" component={ProductPage} />
+        <Route path="/profile" component={Profile} />
+        <Route path="/additem" component={AddItemPage} />
+        <Route path="/adddetails" component={AddMoreDetailsPage} />
+        
 
       <div className="Login">
         {user ? (
@@ -121,19 +122,6 @@ const App = () => {
         )}
       </div>
 
-      <div>
-        <Profile />
-      </div>
-
-      <div>
-       <AddItemPage
-       />
-      </div>
-
-      <div>
-       <AddMoreDetailsPage
-       />
-      </div>
       </Switch>
     </Router>
   );

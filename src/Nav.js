@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './Nav.css';
+import logo from './logo.jpeg';
 
 
 function Nav(){
@@ -9,9 +10,11 @@ function Nav(){
     const closeNavMenu = () => setClick(false);
 
     return (
+    
     <nav className="navbar">
-        
-        <div className="navbar-container">
+        <Link to='/' class="fas fa-chevron-left"></Link>
+        <img className="nav-logo" src={logo} alt="logo"/>
+        <div className="hamburger">
         <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'}/> 
         </div>
@@ -23,12 +26,12 @@ function Nav(){
                 </Link>            
             </li>
             <li className='nav-item'>
-                <Link to='/categories' className='nav-links' onClick={closeNavMenu}>
+                <Link to='/productpage' className='nav-links' onClick={closeNavMenu}>
                     Categories
                 </Link>
             </li>
             <li className='nav-item'>
-                <Link to='/addItem' className='nav-links' onClick={closeNavMenu}>
+                <Link to='/additem' className='nav-links' onClick={closeNavMenu}>
                    + Add Item
                 </Link>
             </li>

@@ -9,28 +9,32 @@ button {
     letter-spacing: 1px;
     background: #2e2cc6;
     cursor: pointer;
+    text-decoration: none;
   }
 
-.login .loginContainer .btnContainer {
+.main .mainContainer .btnContainer {
     width: 100%;
     padding: 24px 0;
+    text-decoration: none;
   }
 
-  .login .logingContainer .btnContainer r{
+  .main .mainContainer .btnContainer r{
       width: 100%;
       padding: 45px 0;
       margin: 14px 0 0 0;
+      text-decoration: none;
   }
   
-  .login .loginContainer .btnContainer p {
+  .main .mainContainer .btnContainer p {
     margin: 14px 0 0 0;
     font-family: Karla;
-    font-size: 16px;
+    font-size: 18px;
     text-align: right;
     color: #ff7008;
+    text-decoration: none;
   }
   
-  .login .loginContainer .btnContainer p span {
+  .main .mainContainer .btnContainer p span {
     color: #2e2cc6;
     font-weight: bold;
     font-family: Karla;
@@ -39,13 +43,14 @@ button {
     margin-left: 5px;
     cursor: pointer;
     transition: all 400ms ease-in-out;
+    text-decoration: none;
   }
   
-  .login .loginContainer .btnContainer p span:hover {
+  .main .mainContainer .btnContainer p span:hover {
     color: #ff7008;
   }
   
-  .login {
+  .main {
     width: 100%;
     min-height: 100vh;
     padding: 0 20px;
@@ -53,8 +58,8 @@ button {
     display: flex;
   }
   
-  .login .loginContainer {
-    padding: 60px;
+  .main .mainContainer {
+    padding: 30px;
     margin: auto;
     width: 100%;
     max-width: 520px;
@@ -64,6 +69,7 @@ button {
     justify-content: center;
     background: white;
   }
+
 
   .hero {
     width: 100%;
@@ -81,6 +87,7 @@ button {
   .hero nav h2 {
     color: #ff7008;
     background: white;
+    text-decoration: none;
   }
   
   .hero nav button {
@@ -93,4 +100,21 @@ button {
     letter-spacing: 1px;
     background: #2e2cc6;
     cursor: pointer;
+  }
+
+
+  #rcorners {
+    border-radius: 50px;
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px;
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .login {
+    text-decoration: none;
   }
