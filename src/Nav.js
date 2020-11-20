@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import './Nav.css';
-import logo from './logo.jpeg';
+import logo from './images/logo.jpeg';
+import './App.css';
 
 
 function Nav(){
@@ -26,8 +26,8 @@ function Nav(){
                 </Link>            
             </li>
             <li className='nav-item'>
-                <Link to='/productpage' className='nav-links' onClick={closeNavMenu}>
-                    Categories
+                <Link to='/itempage' className='nav-links' onClick={closeNavMenu}>
+                    Items
                 </Link>
             </li>
             <li className='nav-item'>

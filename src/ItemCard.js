@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 
-const ProductCard = () => {
+const ItemCard = () => {
   return (
-    <div className="productcard">
-      <img className="productimage" src="" alt="" />
+    <div className="itemcard">
+      <img className="itemimage" src="" alt="" />
       <h2> title </h2>
       <h4> points </h4>
       <p>Location, Availability</p>
@@ -12,4 +12,4 @@ const ProductCard = () => {
   );
 };
 
-export default ProductCard;
+export default ItemCard;

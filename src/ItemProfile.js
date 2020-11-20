@@ -1,21 +1,22 @@
 import React from "react";
+import "./App.css";
 
-const ProductProfile = (props) => {
+const ItemProfile = (props) => {
   return (
-    <div className="productprofile">
+    <div className="itemprofile">
         
         <h1>{props.name}</h1>
         <img src={props.image} />
 
-        <div className="productcard">
+        <div className="itemcard">
             <div>{props.technical_description}</div>
         </div>
 
-        <div className="productcard">
+        <div className="itemcard">
             <div>{props.description}</div>
         </div>
 
-        <div className="productcard">
+        <div className="itemcard">
             <div>{props.user_profile}</div>
         </div>
         
@@ -23,4 +24,4 @@ const ProductProfile = (props) => {
   );
 };      
 
-export default ProductProfile;
+export default ItemProfile;

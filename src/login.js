@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import signInWithGoogle from "./provider";
-import googlelogo from "./googlesignin.png";
+import googlelogo from "./images/googlesignin.png";
 
 const Login = (props) => {
   const {

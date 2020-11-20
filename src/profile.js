@@ -1,7 +1,7 @@
 //profilepage of user
 
 import React from "react";
-import ProductProfile from "./productProfile.js";
+import ItemProfile from "./ItemProfile.js";
 import {Link} from "react-router-dom";
 
 const Profile = () => {

@@ -3,10 +3,9 @@ import "./App.css";
 import Login from "./login";
 import fire from "./fire.js";
 import Toppage from "./toppage.js";
-import Search from "./search.js";
 import Hero from "./hero.js";
 import Profile from "./profile.js";
-import ProductPage from "./productPage";
+import ItemPage from "./ItemPage";
 import AddItemPage from"./AddItemPage";
 import AddMoreDetailsPage from"./AddMoreDetailsPage";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
@@ -97,7 +96,7 @@ const App = () => {
         <Route path="/lend" component={Lend}/>
         <Route path="/toppage" component={Toppage} />
         <Route path="/login" component={Login} />
-        <Route path="/productpage" component={ProductPage} />
+        <Route path="/itempage" component={ItemPage} />
         <Route path="/profile" component={Profile} />
         <Route path="/additem" component={AddItemPage} />
         <Route path="/adddetails" component={AddMoreDetailsPage} />
