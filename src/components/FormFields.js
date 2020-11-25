@@ -28,3 +28,10 @@ export const LocationForm = () => (
   </Form>
 )
 
+export const NoteField = () => (
+  <Form>
+    <Form.TextArea label='Note' placeholder='If you wish to, you can leave a note to the owner' />
+  </Form>
+)
+
+

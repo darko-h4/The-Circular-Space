@@ -1,6 +1,7 @@
 import React from "react";
 import {DropdownPointsSelection} from "./components/DropdownSelectors";
 import {ItemNameForm, ItemDescription} from "./components/FormFields";
+import {Link} from 'react-router-dom';
 
 const AddItemPage= () => {  
     return (
@@ -17,7 +18,7 @@ const AddItemPage= () => {
         <ItemDescription
         />
       </div>
-      <button>Next</button>
+      <Link to="/adddetails"><button>Next</button></Link>
     </div>
     
     );
