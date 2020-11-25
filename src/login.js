@@ -3,6 +3,7 @@ import "./App.css";
 import signInWithGoogle from "./provider";
 import googlelogo from "./images/googlesignin.png";
 
+
 const Login = (props) => {
   const {
     email,
@@ -17,10 +18,12 @@ const Login = (props) => {
     passwordError,
   } = props;
 
+ 
   return (
     <section className="login">
       <h1>Welcome!</h1>
       <h3>Please login or sign up to continue</h3>
+
       <div className="loginContainer">
         <label>Username</label>
         <input
@@ -40,6 +43,7 @@ const Login = (props) => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <p className="errorMsg">{passwordError}</p>
+
 
         <div className="btnContainer">
           {hasAccount ? (
@@ -74,6 +78,8 @@ const Login = (props) => {
         </div>
       </div>
     </section>
+
+    
   );
 };
 
