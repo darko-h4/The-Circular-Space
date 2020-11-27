@@ -2,6 +2,8 @@ import React from "react";
 import {DropdownCategorySelection, DropdownNumberSelection, DropdownDurationSelection, DropdownDeliverySelection, DropdownConditionSelection} from "./components/DropdownSelectors";
 import {LocationForm} from "./components/FormFields";
 import Nav from './Nav';
+import {Link} from 'react-router-dom';
+
 
 
 const AddMoreDetailsPage= () => {  
@@ -28,7 +30,7 @@ return (
     <LocationForm
     />
   </div>
-  <button>Upload Item</button>
+  <Link to="/itemadded"><button>Upload Item</button></Link>
 </div>
 
 );

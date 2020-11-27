@@ -10,6 +10,9 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Nav from './Nav'; 
 import Navlogin from './Navlogin';
 import {Benefits, Borrow, Lend} from "./Onboarding";
+import ItemAdded from "./ItemAdded";
+import ItemCheckout from "./ItemCheckout";
+import ItemBorrowed from "./ItemBorrowed";
 
 
 const App = () => {
@@ -26,7 +29,9 @@ const App = () => {
         <Route path="/profile" component={Profile} />
         <Route path="/additem" component={AddItemPage} />
         <Route path="/adddetails" component={AddMoreDetailsPage} />
-
+        <Route path="/itemadded" component={ItemAdded} />
+        <Route path="/itemcheckout" component={ItemCheckout} />
+        <Route path="/itemborrowed" component={ItemBorrowed} />
       </Switch>
     </Router>
   );

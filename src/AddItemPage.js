@@ -1,6 +1,7 @@
 import React from "react";
 import {DropdownPointsSelection} from "./components/DropdownSelectors";
 import {ItemNameForm, ItemDescription} from "./components/FormFields";
+
 import Nav from './Nav';
 import {Link} from 'react-router-dom';
 
@@ -21,6 +22,7 @@ const AddItemPage= () => {
         <ItemDescription
         />
       </div>
+
       <Link to ='adddetails'><button>Next</button></Link>
     </div>
     

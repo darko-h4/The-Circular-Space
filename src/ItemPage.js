@@ -6,6 +6,8 @@ import CategorySelection from "./categorySelection";
 import ItemProfile from "./ItemProfile";
 import {guitar} from "./ItemProfileExample";
 import Nav from './Nav';
+import {Link} from 'react-router-dom';
+
 
 
 const ItemPage = () => {
@@ -18,7 +20,7 @@ const ItemPage = () => {
         <button>Choose Category</button>
         <CategorySelection />
         <Search />
-        <ItemCard />
+        <Link to="/itemcheckout"><ItemCard /></Link>
         <ItemProfile 
         name={guitar.name}
         image={guitar.image}

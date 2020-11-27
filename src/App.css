@@ -621,3 +621,24 @@ button.auth {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .login {
+    text-decoration: none;
+  }
+
+  .spanDesign p span {
+    color: #2e2cc6;
+    font-weight: bold;
+    font-family: Karla;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+    margin-top: 20px;
+  }
+  
+  .spanDesign p span:hover {
+    color: #ff7008;
+
+  }
