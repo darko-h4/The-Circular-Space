@@ -1,8 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla&family=Roboto+Mono:wght@300&family=Tajawal&display=swap");
 
-.homepage {
+div.standardlo {
   width: 280px;
+  margin-top:50px;
+  width: auto;
+  background: white;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+
 
 /* Headers on top of pages*/
 h1 {
@@ -133,18 +141,13 @@ img.profilepicture {
   border-radius: 8px;
 }
 
-.login {
-  margin-top: 100px;
-}
-
-/* LOGIN CSS BELOW */
+/* BUTTONS */
 button {
   margin-top: 20px;
   width: auto;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 12px;
-  color: #fff;
   font-size: 16px;
   letter-spacing: 1px;
   background: #2e2cc6;
@@ -158,10 +161,74 @@ button {
   display: flex;
   align-items: center;
   flex-direction: column;
+  transition: all 200ms ease-in-out;
+}
+
+button:hover {
+  margin-top: 20px;
+  width: auto;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: #ff7008;
+  cursor: pointer;
+  font-family: Karla;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+button.white {
+  margin-top: 20px;
+  width: auto;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  color: #2e2cc6;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: white;
+  cursor: pointer;
+  font-family: Karla;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+button.white:hover {
+  margin-top: 20px;
+  width: auto;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  color: #ff7008;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: white;
+  cursor: pointer;
+  font-family: Karla;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 button.login {
-  margin-top: 5px;
+  margin-top: 15px;
   width: 191px;
   border: none;
   border-radius: 4px;
@@ -180,18 +247,50 @@ button.login {
   display: flex;
   align-items: center;
   flex-direction: column;
+  transition: all 200ms ease-in-out;
 }
 
-button.google {
-  margin-top: 40px;
+button.login:hover {
+  margin-top: 15px;
+  width: 191px;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: #ff7008;
+  cursor: pointer;
+  font-family: Karla;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+button.auth {
+  margin-top: 0px;
   background-color: white;
   padding: 0px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 
-.login .loginContainer {
-  margin: auto;
-  width: 300px;
+/* LOGIN CSS BELOW */
+
+.login {
+  margin-top:50px;
+  width: auto;
   background: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .login .loginContainer label {
@@ -224,6 +323,9 @@ button.google {
 .login .loginContainer .btnContainer p {
   font-family: Karla;
   font-size: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   color: #ff7008;
   margin-top: 20px;
@@ -333,9 +435,11 @@ button.google {
     height: 80px;
     top: 0;
     z-index: 999;
+    width:100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    
   }
   
   
@@ -345,17 +449,16 @@ button.google {
   }
   
   .nav-menu {
-    right: 1%;
-    top: 9%;
+    right: 20%;
+    top: 10%;
     display: grid;
     grid-template-columns: repeat(auto,3);
     grid-gap: 0px;
     list-style: none;
     z-index: 2;
-    background-color: #2e2cc6;
+    background-color:white;
     position: absolute;
-    width: 200px;
-    height: 370px;
+    width: auto;
   }
   
   .hidden{
@@ -363,27 +466,29 @@ button.google {
   }
   
   .nav-item {
-    height: 80px;
-    padding: 10px;
+    height: 50px;
+    padding: 0px;
     margin: 10;
+    color: white;
   }
   
   .nav-links {
-    color:black;
-    font-size: 17px;
+    color:#2e2cc6;
+    font-size: 16px;
     display: flex;
     align-items: center;
     text-decoration: none;
-    height: 100%;
+    height: 50%;
   }
   
   .nav-links:hover {
-    border-bottom: 4px solid #fff;
     transition: all 0.2s ease-out;
+    color: #ff7008;
+    font-size:18px;
   }
   
   .menu-icon {
-    color: black;
+    color: #2e2cc6;
     font-size: 30px;
     right: 3%;
   }
@@ -515,8 +620,4 @@ button.google {
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .login {
-    text-decoration: none;
   }
