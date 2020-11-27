@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
+import Nav from './Nav';
 
 const ItemProfile = (props) => {
   return (
-    <div className="itemprofile">
-        
+    <div className="standardlo">
+        <Nav/>
         <h1>{props.name}</h1>
         <img src={props.image} />
 

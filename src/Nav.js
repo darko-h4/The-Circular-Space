@@ -2,12 +2,17 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import logo from './images/logo.jpeg';
 import './App.css';
+import fire from "./fire.js";
 
 
 function Nav(){
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
     const closeNavMenu = () => setClick(false);
+
+    const handleLogout = () => {
+        fire.auth().signOut();
+      };
 
     return (
     
@@ -34,6 +39,12 @@ function Nav(){
                 <Link to='/additem' className='nav-links' onClick={closeNavMenu}>
                    + Add Item
                 </Link>
+            </li>
+            <li className='nav-item'>
+            <Link to='/login'>
+            <button onClick={handleLogout}>Logout</button>
+            </Link>
+
             </li>
         </ul>
     </nav>

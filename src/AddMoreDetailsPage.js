@@ -1,12 +1,15 @@
 import React from "react";
 import {DropdownCategorySelection, DropdownNumberSelection, DropdownDurationSelection, DropdownDeliverySelection, DropdownConditionSelection} from "./components/DropdownSelectors";
 import {LocationForm} from "./components/FormFields";
+import Nav from './Nav';
 import {Link} from 'react-router-dom';
+
 
 
 const AddMoreDetailsPage= () => {  
 return (
-  <div>
+  <div className='standardlo'>
+    <Nav/>
     <h1>Add more details</h1>
     <h3>Add details to make it easier for others to find the product they are looking for.</h3>
     <div className= "dropdownSizings">

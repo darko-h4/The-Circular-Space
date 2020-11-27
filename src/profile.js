@@ -3,10 +3,12 @@
 import React from "react";
 import ItemProfile from "./ItemProfile.js";
 import {Link} from "react-router-dom";
+import Nav from './Nav';
 
 const Profile = () => {
   return (
-    <div>
+    <div className='standardlo'>
+      <Nav/>
       <h1>Profile Page</h1>
       <div className="usercard">
         <img className="profilepicture" alt=""></img>

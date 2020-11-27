@@ -5,13 +5,17 @@ import ItemCard from "./ItemCard";
 import CategorySelection from "./categorySelection";
 import ItemProfile from "./ItemProfile";
 import {guitar} from "./ItemProfileExample";
+import Nav from './Nav';
 import {Link} from 'react-router-dom';
 
 
+
 const ItemPage = () => {
+    
   return (
-    <div className="itempage">
-        
+     
+    <div className="standardlo">
+        <Nav/>
         <Toppage />
         <button>Choose Category</button>
         <CategorySelection />
