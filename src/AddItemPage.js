@@ -8,23 +8,27 @@ import {Link} from 'react-router-dom';
 
 const AddItemPage= () => {  
     return (
-      <div className='standardlo'>
+      <section className='main'>
+      <div className='mainContainer'>
         <Nav/>
+        <div className='toppage'>
         <h1>Add your item</h1>
         <h3>Make people know why they should borrow your item.</h3>
-        <div className= "dropdownSizings">
-        
-        <ItemNameForm
-        />
-        <label>Amount of points to borrow item </label>
-        <DropdownPointsSelection
-        />
-        <ItemDescription
-        />
-      </div>
+        </div>
 
-      <Link to ='adddetails'><button>Next</button></Link>
+        <div className= "additem">
+          <ItemNameForm />
+          <label>Amount of points to borrow item <br/> </label>
+          <DropdownPointsSelection/>
+          <ItemDescription/>
+          </div>
+
+        <div className='btnContainer'>
+          <Link to ='adddetails'><button>Next</button></Link>
+          </div>
+
     </div>
+    </section>
     
     );
     };

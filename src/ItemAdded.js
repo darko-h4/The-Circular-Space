@@ -2,28 +2,28 @@ import React from "react";
 import {Link} from 'react-router-dom';
 import ItemCard from './ItemCard';
 import "./App.css";
+import Nav from './Nav';
 
 const ItemAdded= () => {  
     return (
-
-    <div>
+      
+    <section className='main'>
+    <div className='mainContainer'>
+      <Nav />
         <h1>Item added!</h1>
-        <h3>Other people can now see and borrow your item :)</h3>
+        <h3>Other people can now see and borrow your item!</h3>
         
         <div>
         <ItemCard
         />
       </div>
       
-      <div className="spanDesign">
+      <div className="btnContainer">
       <Link to="/adddetails"><button>Back to Items</button></Link>
-      <p>
-         <span onClick={() => <Link to="/profile"></Link>}>
-                  Profile page
-        </span>
-        </p>
+      <Link to="/profile"><button className='white'>Profile page</button></Link>
       </div>
-      </div>
+    </div>
+    </section>
 
     
     );
