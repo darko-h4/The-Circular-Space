@@ -11,6 +11,279 @@ div.standardlo {
   flex-direction: column;
 }
 
+/* NAVIGATION CSS BELOW */ 
+
+.navbar {
+  height: 100px;
+  top: 0;
+  z-index: 999;
+  width:450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+  
+.fa-typo3 {
+  margin-left: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.nav-menu {
+  right: 35%;
+  top: 10%;
+  padding:20px;
+  display: grid;
+  grid-template-columns: repeat(auto,3);
+  grid-gap: 0px;
+  list-style: none;
+  z-index: 2;
+  background-color: white;
+  position: absolute;
+  width: auto;
+  border-radius:12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.hidden{
+  display:none;
+}
+
+.nav-item {
+  height: 50px;
+  padding: 0px;
+  margin: 10;
+  color: white;
+}
+
+.nav-links {
+  color:#2e2cc6;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 50%;
+}
+
+.nav-links:hover {
+  transition: all 0.2s ease-out;
+  color: #ff7008;
+  font-size:18px;
+}
+
+.menu-icon {
+  color: #2e2cc6;
+  font-size: 30px;
+  right: 3%;
+}
+
+.menu-icon:hover {
+  color: #ff7008;
+  font-size: 30px;
+  right: 3%;
+  cursor: pointer;
+}
+
+.fa-times {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: flex-start;
+  width: 40px;
+  height: 40px;
+  margin-left: 0px;
+  margin-top: 0px;
+
+}
+
+.fa-chevron-left{
+ text-decoration: none;
+ margin-left: 10px;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ font-size: 30px;
+ display: flex;
+ justify-content: flex-start;
+ color: #2e2cc6;
+}
+
+.fa-chevron-left:hover{
+  text-decoration: none;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  display: flex;
+  justify-content: flex-start;
+  color: #ff7008;
+ }
+
+/* PAGE LAYOUT CSS BELOW */ 
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background: #e9e9e9;
+}
+
+.mainContainer {
+  padding: 30px;
+  margin: auto;
+  width: 100%;
+  max-width: 520px;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  background: white;
+}
+
+.toppage {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  height: auto;
+}
+
+.text{
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+
+.main .mainContainer .btnContainer {
+  width: 100%;
+  padding: 10px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
+img.onboarding{
+  width:450px;
+  height:300px;
+  border-radius:30px;
+}
+
+/* LOGIN CSS BELOW */
+
+.main .loginContainer label {
+  color: black;
+  font-family: Karla;
+  margin: 14px 0;
+  display: block;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.main .loginContainer input {
+  width: 100%;
+  border: 1px solid #2E2CC6;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  color:  gray;
+  font: Karla;
+  font-size: 16px;
+  letter-spacing: 1px;
+  
+}
+
+.main .loginContainer .btnContainer {
+  width: 100%;
+  padding: 0px 0;
+}
+
+.main .loginContainer .btnContainer p {
+  font-family: Karla;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #ff7008;
+  margin-top: 20px;
+}
+
+.main .loginContainer .btnContainer p span {
+  color: #2e2cc6;
+  font-weight: bold;
+  font-family: Karla;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+  margin-top: 20px;
+}
+
+.main .loginContainer .btnContainer p span:hover {
+  color: #ff7008;
+}
+
+.main .loginContainer .errorMsg {
+  color: red;
+  font-size: 16px;
+}
+
+/* category selection */
+
+.categories{
+
+  margin-top:30px;
+  text-align:left;
+}
+
+.categoryselection{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 5px;
+}
+
+.hero{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding:10px;
+  margin-top:10px;
+}
+
+img.hero{
+  border-radius: 30px;
+}
+
+
+/* for the itemcard */
+
+.main .mainContainer .itemcard {
+  width: 100%;
+  height: auto;
+  padding:10px;
+  margin-top: 20px;
+  background: #ebf3ff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  color: black;
+}
+
+img.itemimage {
+  border-radius: 12px;
+}
 
 /* Headers on top of pages*/
 h1 {
@@ -56,30 +329,53 @@ p {
   line-height: 150%;
 }
 
-/* for the itemcard */
-.itemcard {
-  position: relative;
-  width: 330px;
-  height: 130px;
-  background: #ebf3ff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
+
+ /* SEARCH BAR */
+
+ .search-form {
+  min-height: 10vh;
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  flex-direction: column;
 }
 
-img.itemimage {
-  border-radius: 12.9676px;
-  color: black;
+.search-bar {
+  width: 200px;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: left;
 }
+
+.search-form input {
+  width: 40%;
+  border: 1px solid #2E2CC6;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  color:  gray;
+  font: Karla;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+/* add item pages */
+.additem {
+  padding:10px;
+  width: 100%;
+  margin-top: 30px;
+}
+
 
 /*for the user profile page card */
 .usercard {
-  width: 331px;
-  height: 227px;
+  width: auto;
+  height: auto;
   left: 22px;
-  top: 137px;
+  margin-top: 50px;
   background: #fff3ea;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
@@ -89,65 +385,29 @@ img.itemimage {
 }
 
 img.profilepicture {
-  width: 174px;
-  height: 132px;
+  width: 350px;
+  height: 240px;
   left: 100px;
   top: 156px;
   background: black;
-  border-radius: 10.9783px;
+  border-radius: 12px;
 }
 
-.toppage {
-  width: 300px;
+.profile{
+  margin-top:30px;
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 
-.refresh-button {
-  background: darkblue;
-  border: none;
-  padding: 10px 20px;
-  height: 50px;
-  color: white;
-  margin: 20px;
-  border-radius: 8px;
-}
-
-.search-form {
-  min-height: 10vh;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-
-.search-bar {
-  width: 200px;
-  padding: 10px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-
-.search-button {
-  background: #ff7008;
-  border: none;
-  padding: 10px 20px;
-  color: white;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  margin: 10px;
-  border-radius: 8px;
-}
 
 /* BUTTONS */
 button {
-  margin-top: 20px;
+  margin: 10px;
+  padding: 10px;
   width: auto;
   border: none;
   border-radius: 4px;
-  padding: 12px;
   font-size: 16px;
   letter-spacing: 1px;
   background: #2e2cc6;
@@ -165,11 +425,11 @@ button {
 }
 
 button:hover {
-  margin-top: 20px;
+  margin-top: 10px;
+  padding: 10px;
   width: auto;
   border: none;
   border-radius: 4px;
-  padding: 12px;
   font-size: 16px;
   letter-spacing: 1px;
   background: #ff7008;
@@ -186,11 +446,11 @@ button:hover {
 }
 
 button.white {
-  margin-top: 20px;
+  margin-top: 10px;
+  padding: 10px;
   width: auto;
   border: none;
   border-radius: 4px;
-  padding: 12px;
   color: #2e2cc6;
   font-size: 16px;
   letter-spacing: 1px;
@@ -207,11 +467,55 @@ button.white {
 }
 
 button.white:hover {
-  margin-top: 20px;
+  margin-top: 10px;
+  padding: 10px;
   width: auto;
   border: none;
   border-radius: 4px;
-  padding: 12px;
+  color: #ff7008;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: white;
+  cursor: pointer;
+  font-family: Karla;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+button.outline{
+  margin-top: 10px;
+  padding: 10px;
+  width: auto;
+  border: 1px solid #2E2CC6;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #2e2cc6;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: white;
+  cursor: pointer;
+  font-family: Karla;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+button.outline:hover{
+  margin-top: 10px;
+  padding: 10px;
+  width: auto;
+  border: 1px solid #ff7008;
+  box-sizing: border-box;
+  border-radius: 4px;
   color: #ff7008;
   font-size: 16px;
   letter-spacing: 1px;
@@ -281,364 +585,3 @@ button.auth {
   align-items: center;
   flex-direction: row;
 }
-
-/* LOGIN CSS BELOW */
-
-.login {
-  margin-top:50px;
-  width: auto;
-  background: white;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.login .loginContainer label {
-  color: black;
-  font-family: Karla;
-  margin: 14px 0;
-  display: block;
-  font-size: 16px;
-  line-height: 1;
-}
-
-.login .loginContainer input {
-  width: 100%;
-  border-color: #2e2cc6;
-  outline: none;
-  font-size: 19px;
-  padding: 10px;
-  color: #2e2cc6;
-  font: Karla;
-  font-size: 16px;
-  letter-spacing: 1px;
-  border-radius: 8px;
-}
-
-.login .loginContainer .btnContainer {
-  width: 100%;
-  padding: 0px 0;
-}
-
-.login .loginContainer .btnContainer p {
-  font-family: Karla;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  color: #ff7008;
-  margin-top: 20px;
-}
-
-.login .loginContainer .btnContainer p span {
-  color: #2e2cc6;
-  font-weight: bold;
-  font-family: Karla;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  margin-left: 5px;
-  cursor: pointer;
-  transition: all 400ms ease-in-out;
-  margin-top: 20px;
-}
-
-.login .loginContainer .btnContainer p span:hover {
-  color: #ff7008;
-}
-
-.login .loginContainer .errorMsg {
-  color: red;
-  font-size: 16px;
-}
-
-.hero {
-  min-height: 100vh;
-}
-
-.hero nav {
-  padding: 20px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.hero nav h2 {
-  color: #ff7008;
-  background: white;
-}
-
-.hero nav button {
-  border: none;
-  width: 118px;
-  border-radius: 4px;
-  padding: 15px 0;
-  color: #fff;
-  font-size: 16px;
-  letter-spacing: 1px;
-  background: #2e2cc6;
-  cursor: pointer;
-}
-
-/* ITEM CSS BELOW */
-
-.itemcard {
-  margin-top: 20px;
-  position: relative;
-  width: 331px;
-  height: 128px;
-
-  background: #ebf3ff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-}
-
-.h2 {
-  position: absolute;
-  top: 5px;
-  width: 160px;
-  left: 160px;
-  font-family: Karla;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-}
-
-.p {
-  position: absolute;
-  left: 160px;
-  top: 60px;
-  width: 160px;
-  font-family: Karla;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-}
-
-.itemimage {
-  position: absolute;
-  left: 6.82%;
-  right: 54.9%;
-  top: 9.38%;
-  bottom: 9.38%;
-
-  border-radius: 12.9676px;
-}
-
-.dropdownSizings {
-  margin: left;
-  width: 300px;
-}
-
-/* NAVIGATION CSS BELOW */ 
-.navbar {
-    height: 80px;
-    top: 0;
-    z-index: 999;
-    width:100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    
-  }
-  
-  
-  .fa-typo3 {
-    margin-left: 0.5rem;
-    font-size: 1.8rem;
-  }
-  
-  .nav-menu {
-    right: 20%;
-    top: 10%;
-    display: grid;
-    grid-template-columns: repeat(auto,3);
-    grid-gap: 0px;
-    list-style: none;
-    z-index: 2;
-    background-color:white;
-    position: absolute;
-    width: auto;
-  }
-  
-  .hidden{
-    display:none;
-  }
-  
-  .nav-item {
-    height: 50px;
-    padding: 0px;
-    margin: 10;
-    color: white;
-  }
-  
-  .nav-links {
-    color:#2e2cc6;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    height: 50%;
-  }
-  
-  .nav-links:hover {
-    transition: all 0.2s ease-out;
-    color: #ff7008;
-    font-size:18px;
-  }
-  
-  .menu-icon {
-    color: #2e2cc6;
-    font-size: 30px;
-    right: 3%;
-  }
-  
-  .fa-times {
-    position: absolute;
-  }
-  
-  
-  .nav-logo {
-    display: flex;
-    justify-content: flex-start;
-    width: 40px;
-    height: 40px;
-    margin-left: 80px;
-    margin-top: 0px;
-  
-  }
-  
-  .fa-chevron-left{
-   text-decoration: none;
-   margin-left: 45px;
-   margin-top: 10px;
-   margin-bottom: 10px;
-   font-size: 30px;
-   
-  }
-
-  /* ONBOARDING CSS BELOW */
-
-.main .mainContainer .btnContainer {
-    width: 100%;
-    padding: 24px 0;
-    text-decoration: none;
-  }
-
-  .main .mainContainer .btnContainer r{
-      width: 100%;
-      padding: 45px 0;
-      margin: 14px 0 0 0;
-      text-decoration: none;
-  }
-  
-  .main .mainContainer .btnContainer p {
-    margin: 14px 0 0 0;
-    font-family: Karla;
-    font-size: 18px;
-    text-align: right;
-    color: #ff7008;
-    text-decoration: none;
-  }
-  
-  .main .mainContainer .btnContainer p span {
-    color: #2e2cc6;
-    font-weight: bold;
-    font-family: Karla;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    margin-left: 5px;
-    cursor: pointer;
-    transition: all 400ms ease-in-out;
-    text-decoration: none;
-  }
-  
-  .main .mainContainer .btnContainer p span:hover {
-    color: #ff7008;
-  }
-  
-  .main {
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 20px;
-    background: #e9e9e9;
-    display: flex;
-  }
-  
-  .main .mainContainer {
-    padding: 30px;
-    margin: auto;
-    width: 100%;
-    max-width: 520px;
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: white;
-  }
-
-
-  .hero {
-    width: 100%;
-    min-height: 100vh;
-  }
-  
-  .hero nav {
-    width: 100%;
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .hero nav h2 {
-    color: #ff7008;
-    background: white;
-    text-decoration: none;
-  }
-  
-  .hero nav button {
-    border: none;
-    width: 118px;
-    border-radius: 4px;
-    padding: 15px 0;
-    color: #fff;
-    font-size: 16px;
-    letter-spacing: 1px;
-    background: #2e2cc6;
-    cursor: pointer;
-  }
-
-
-  #rcorners {
-    border-radius: 50px;
-    background-position: left top;
-    background-repeat: repeat;
-    padding: 20px;
-    width: 400px;
-    height: 300px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .login {
-    text-decoration: none;
-  }
-
-  .spanDesign p span {
-    color: #2e2cc6;
-    font-weight: bold;
-    font-family: Karla;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    margin-left: 5px;
-    cursor: pointer;
-    transition: all 400ms ease-in-out;
-    margin-top: 20px;
-  }
-  
-  .spanDesign p span:hover {
-    color: #ff7008;
-
-  }

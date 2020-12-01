@@ -21,10 +21,13 @@ const Login = (props) => {
   } = props;
 
   return (
-    <section className="login">
+    <section className="main">
+    <div className="mainContainer">
       <Navlogin/>
-      <h1>Welcome!</h1>
-      <h3>Please login or sign up to continue</h3>
+      
+      <div className='toppage'>
+      <h1>Sign-up or Login!</h1>
+      </div>
       <div className="loginContainer">
         <label>Email address</label>
         <input
@@ -48,6 +51,11 @@ const Login = (props) => {
         <div className="btnContainer">
           {hasAccount ? (
             <>
+            <p>
+                <span onClick={() => setHasAccount(!hasAccount)}>
+                  Sign up for a new account!
+                </span>
+            </p>
               <button onClick={signInWithGoogle} className="auth">
                 <img src={googlelogo} width="191" height="46"></img>
               </button>
@@ -57,15 +65,15 @@ const Login = (props) => {
               <button onClick={handleLogin} className="login">
                 Log In
               </button>
-              <p>
-                <span onClick={() => setHasAccount(!hasAccount)}>
-                  Sign up for a new account!
-                </span>
-              </p>
               
             </>
           ) : (
             <>
+            <p>
+                <span onClick={() => setHasAccount(!hasAccount)}>
+                  I already have an account!
+                </span>
+            </p>
               <button onClick={signInWithGoogle} className="auth">
                 <img src={googlelogo} width="191" height="46"></img>
               </button>
@@ -75,14 +83,11 @@ const Login = (props) => {
               <button onClick={handleSignup} className="login">
                 Sign up
               </button>
-              <p>
-                <span onClick={() => setHasAccount(!hasAccount)}>
-                  I already have an account!
-                </span>
-              </p>
+              
             </>
           )}
         </div>
+      </div>
       </div>
     </section>
   );

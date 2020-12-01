@@ -7,12 +7,12 @@ import ItemPage from "./ItemPage";
 import AddItemPage from"./AddItemPage";
 import AddMoreDetailsPage from"./AddMoreDetailsPage";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Nav from './Nav'; 
-import Navlogin from './Navlogin';
 import {Benefits, Borrow, Lend} from "./Onboarding";
 import ItemAdded from "./ItemAdded";
 import ItemCheckout from "./ItemCheckout";
 import ItemBorrowed from "./ItemBorrowed";
+import CategorySelection from "./categorySelection";
+import ItemProfile from './ItemProfile';
 
 
 const App = () => {
@@ -32,6 +32,8 @@ const App = () => {
         <Route path="/itemadded" component={ItemAdded} />
         <Route path="/itemcheckout" component={ItemCheckout} />
         <Route path="/itemborrowed" component={ItemBorrowed} />
+        <Route path='/category' component={CategorySelection} />
+        <Route path='/itemprofile' component={ItemProfile}/>
       </Switch>
     </Router>
   );

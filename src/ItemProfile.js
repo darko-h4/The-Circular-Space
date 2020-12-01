@@ -4,10 +4,14 @@ import Nav from './Nav';
 
 const ItemProfile = (props) => {
   return (
-    <div className="standardlo">
-        <Nav/>
+    <section className='main'>
+    <div className="mainContainer">
+      <Nav/>
+      <div className='toppage'>
         <h1>{props.name}</h1>
         <img src={props.image} />
+      </div>
+        
 
         <div className="itemcard">
             <div>{props.technical_description}</div>
@@ -22,6 +26,7 @@ const ItemProfile = (props) => {
         </div>
         
     </div>
+    </section>
   );
 };      
 

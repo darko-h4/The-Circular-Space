@@ -8,11 +8,15 @@ import {Link} from 'react-router-dom';
 
 const AddMoreDetailsPage= () => {  
 return (
-  <div className='standardlo'>
+  <section className='main'>
+  <div className='mainContainer'>
     <Nav/>
+    <div className='toppage'>
     <h1>Add more details</h1>
     <h3>Add details to make it easier for others to find the product they are looking for.</h3>
-    <div className= "dropdownSizings">
+    </div>
+
+    <div className= "additem">
     <label>Category</label>
     <DropdownCategorySelection
     />
@@ -30,8 +34,11 @@ return (
     <LocationForm
     />
   </div>
+  <div className='btnContainer'>
   <Link to="/itemadded"><button>Upload Item</button></Link>
+  </div>
 </div>
+</section>
 
 );
 };
