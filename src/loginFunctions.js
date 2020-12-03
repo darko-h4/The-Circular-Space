@@ -20,7 +20,7 @@ const clearInput = () => {
 
 const clearErrors = () => {
   setEmailError("");
-  setPasswordError("Please enter at least 6 characters");
+  setPasswordError("");
 };
 
 const handleLogin = () => {

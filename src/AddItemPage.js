@@ -18,8 +18,11 @@ const AddItemPage= () => {
 
         <div className= "additem">
           <ItemNameForm />
-          <label>Amount of points to borrow item <br/> </label>
+          <br/>
+          <p>Amount of points to borrow item  </p>
           <DropdownPointsSelection/>
+          <br/>
+          <br/>
           <ItemDescription/>
           </div>
 

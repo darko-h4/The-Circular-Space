@@ -13,26 +13,32 @@ return (
     <Nav/>
     <div className='toppage'>
     <h1>Add more details</h1>
-    <h3>Add details to make it easier for others to find the product they are looking for.</h3>
+    <h3>Adding these details will make it easier for others to find the product they are looking for.</h3>
     </div>
 
     <div className= "additem">
-    <label>Category</label>
+    <p>Category</p>
     <DropdownCategorySelection
     />
-    <label>For how long do you wish to rent out your item? </label>
+    <br/>
+    <p>For how long do you wish to rent out your item? </p>
     <DropdownNumberSelection
     />
+    <br/>
     <DropdownDurationSelection
     />
-    <label>Delivery method (physical pick-up or mail)</label>
+    <br/>
+    <p>Delivery method (physical pick-up or mail)</p>
     <DropdownDeliverySelection
     />
-    <label>Condition of the item</label>
+    <br/>
+    <p>Condition of the item</p>
     <DropdownConditionSelection
     />
+    <br/>
     <LocationForm
     />
+
   </div>
   <div className='btnContainer'>
   <Link to="/itemadded"><button>Upload Item</button></Link>

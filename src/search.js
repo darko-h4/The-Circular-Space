@@ -8,7 +8,6 @@ const Search = () => {
       <button  type="submit">
         Search
       </button>
-      <Link to='/category'><button className="white">Choose Category</button></Link>
     </form>
   );
 };
