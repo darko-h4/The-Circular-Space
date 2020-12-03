@@ -29,7 +29,7 @@ const Login = (props) => {
       <h1>Sign-up or Login!</h1>
       </div>
       <div className="loginContainer">
-        <label>Email address</label>
+        <p>Email</p>
         <input
           type="text"
           autoFocus
@@ -39,7 +39,7 @@ const Login = (props) => {
         />
         <p className="errorMsg">{emailError}</p>
 
-        <label>Password</label>
+        <p>Password (min 6 characters)</p>
         <input
           type="password"
           required

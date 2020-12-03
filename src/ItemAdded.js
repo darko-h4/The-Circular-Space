@@ -19,7 +19,7 @@ const ItemAdded= () => {
       </div>
       
       <div className="btnContainer">
-      <Link to="/adddetails"><button>Back to Items</button></Link>
+      <Link to="/itempage"><button>Back to Items</button></Link>
       <Link to="/profile"><button className='white'>Profile page</button></Link>
       </div>
     </div>

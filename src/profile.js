@@ -10,18 +10,22 @@ const Profile = () => {
     <div className='mainContainer'>
       <Nav/>
       <div className='toppage'>
-      <h1>Profile Page</h1>
+      <h1>Arthur Jansen</h1>
       </div>
       
       <div className="usercard">
         <img className="profilepicture" src={picture} alt="profilepicture"></img>
         <h4>73 Points</h4>
-        <p>København N, 2200</p>
+        <p className='blue'>København N, 2200</p>
       </div>
+
 
       <div className='profile'>
       <Link to="/additem"> <button>Add new item</button></Link>
-      <h3>Your Items</h3>
+      </div>
+
+      <div className='toppage'>
+      <h1>Your Items</h1>
       </div>
 
       <Link to="/ItemProfile"><ItemCard/></Link>

@@ -17,7 +17,7 @@ const ItemPage = () => {
       <Nav/>
         <div class='toppage'>
           <h1>Products</h1>
-          <h3> Find your next circular item!</h3> 
+          <Link to='/category'><button className="outline">Choose Category</button></Link>
           <Search />
         </div>
         <Link to="/ItemProfile"><ItemCard/></Link>
