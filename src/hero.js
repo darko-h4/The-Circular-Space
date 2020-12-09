@@ -1,7 +1,8 @@
 import React from "react";
 import Nav from './Nav';
 import {Link} from 'react-router-dom';
-import bike from "./images/bike.jpg"
+import bike from "./images/bike.jpg";
+import firebase from 'firebase';
 
 //toppage of the page after login, will be raplaced by header
 
@@ -12,12 +13,13 @@ const Hero = () => {
       <Nav/>
 
       <div className='toppage'>
-      <h1>Welcome!</h1>
+      <h1>Welcome {firebase.auth().currentUser.displayName}!</h1>
       </div>
 
       <div className='hero'>
       <img className="hero" src={bike} alt="bike" height='280px' width='440px' />
-      <p><br/>This is your Circular space, are you are ready to get circular?  <br />
+      <p><br/>
+      This is your Circular space, are you are ready to get circular?  <br />
         Why don't you try out one of the options below?</p>
       </div>
 
