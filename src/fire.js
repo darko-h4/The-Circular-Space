@@ -16,7 +16,7 @@ var firebaseConfig = {
 const fire = firebase.initializeApp(firebaseConfig);
 
 var firestore = firebase.firestore();
-const docRef = firestore.doc("Items/Object");
+const docRef = firestore.collection("Items").doc();
 const admin = require('firebase-admin');
 admin.initializeApp();
 
@@ -27,6 +27,7 @@ const location = document.querySelector("#locationItem");
 const note = document.querySelector("#noteItem");
 
 saveButton.addEventListener("click", function() {
+    
     const nameValue = item.value;
     const DescriptionValue = description.value;
     const locationValue = location.value;
@@ -49,15 +50,4 @@ saveButton.addEventListener("click", function() {
 })
 
 export default fire;
-
-/*
-getRealTimeUpdates = function() {
-    docRef.onSnapshot(function(doc) {
-        if(doc && doc.exist) {
-            const myData = doc.data();
-            outputHeader.innerText = "Item status: " + myData.itemToSave;
-        }
-    });
-}
-*/
 

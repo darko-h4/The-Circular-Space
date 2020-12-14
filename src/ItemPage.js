@@ -1,9 +1,6 @@
 import React from "react";
 import Search from "./search";
 import ItemCard from "./ItemCard";
-import CategorySelection from "./categorySelection";
-import ItemProfile from "./ItemProfile";
-import {guitar} from "./ItemProfileExample";
 import Nav from './Nav';
 import {Link} from 'react-router-dom';
 
