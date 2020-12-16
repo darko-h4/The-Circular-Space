@@ -5,6 +5,9 @@ import {ItemNameForm, ItemDescription} from "./components/FormFields";
 import Nav from './Nav';
 import {Link} from 'react-router-dom';
 
+import {collection} from './fire';
+
+console.log(collection.get());
 
 const AddItemPage= () => {  
     return (
@@ -17,24 +20,45 @@ const AddItemPage= () => {
         </div>
 
         <div className= "additem">
-          <ItemNameForm />
+          <ItemNameForm id="itemname"/>
           <br/>
           <p>Amount of points to borrow item  </p>
-          <DropdownPointsSelection/>
+          <DropdownPointsSelection id="points"/>
           <br/>
           <br/>
-          <ItemDescription/>
+          <ItemDescription id="description"/>
           </div>
 
         <div className='btnContainer'>
-          <Link to ='adddetails'><button>Next</button></Link>
+          <Link to ='adddetails' onClick={UploadItem}> <button>Next</button></Link>
           </div>
 
     </div>
     </section>
     
     );
+
     };
+
+    const UploadItem= () => {
+
+      const item = document.querySelector("#itemname").value;
+      const description = document.querySelector("#description").value;
+      const points = document.querySelector("div.dropdown div").innerHTML;
+    
+        console.log("save " + item + " to Firestore");
+        collection.add({
+            Name: item,
+            Description: description,
+            Points: points,
+        })
+        .then (result => localStorage.setItem("id", result.id));
+          /*.then(function() {*/
+            console.log("Status saved!");
+      
+    } 
+
+  
     
     export default AddItemPage;
-    
+

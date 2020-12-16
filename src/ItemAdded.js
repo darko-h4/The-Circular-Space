@@ -25,7 +25,7 @@ const ItemAdded= () => {
     </div>
     </section>
 
-    
+
     );
     };
     

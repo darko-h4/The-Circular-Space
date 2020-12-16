@@ -102,20 +102,22 @@ const conditionOptions = [
     },
 ]
 
-export const DropdownCategorySelection = () => (
+export const DropdownCategorySelection = (props) => (
   <Dropdown
     placeholder='Item type'
     fluid
     selection
+    id={props.id}
     options={categoryOptions}
   />
 )
 
-export const DropdownNumberSelection = () => (
+export const DropdownNumberSelection = (props) => (
   <Dropdown
     search
     searchInput={{ type: 'number' }}
     selection
+    id={props.id}
     options={numberOptions}
     placeholder='Select amount'
   />
@@ -131,29 +133,32 @@ export const DropdownPointsSelection = () => (
   />
 )
 
-export const DropdownDurationSelection = () => (
+export const DropdownDurationSelection = (props) => (
   <Dropdown
     placeholder='Choose duration'
     fluid
     selection
+    id={props.id}
     options={durationOptions}
   />
 )
 
-export const DropdownDeliverySelection = () => (
+export const DropdownDeliverySelection = (props) => (
   <Dropdown
     placeholder='Choose delivery'
     fluid
     selection
+    id={props.id}
     options={deliveryOptions}
   />
 )
 
-export const DropdownConditionSelection = () => (
+export const DropdownConditionSelection = (props) => (
   <Dropdown
     placeholder='Choose condtion'
     fluid
     selection
+    id={props.id}
     options={conditionOptions}
   />
 )
