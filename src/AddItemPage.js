@@ -30,7 +30,8 @@ const AddItemPage= () => {
           </div>
 
         <div className='btnContainer'>
-          <Link to ='adddetails' onClick={UploadItem}> <button>Next</button></Link>
+          <Link to ='adddetails' onClick={UploadItem}> 
+    <button>Next</button></Link>
           </div>
 
     </div>
@@ -53,7 +54,6 @@ const AddItemPage= () => {
             Points: points,
         })
         .then (result => localStorage.setItem("id", result.id));
-          /*.then(function() {*/
             console.log("Status saved!");
       
     } 

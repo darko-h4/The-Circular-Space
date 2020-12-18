@@ -12,13 +12,14 @@ var firebaseConfig = {
     appId: "1:1068509296256:web:f8ab88903e044a0499d865",
 };
 
-const fire = firebase.initializeApp(firebaseConfig);
+export const fire = firebase.initializeApp(firebaseConfig);
 
-var firestore = firebase.firestore();
+export const firestore = firebase.firestore();
 export const collection = firestore.collection("Items");
+export const borrowcollection = firestore.collection("BorrowedItems");
 export const docRef = collection.doc();
 const admin = require('firebase-admin');
-admin.initializeApp();
+admin.initializeApp(); 
 
 export default fire;
 

@@ -57,12 +57,12 @@ const Login = (props) => {
                 </span>
             </p>
               <button onClick={signInWithGoogle} className="auth">
-                <img src={googlelogo} width="191" height="46"></img>
+                <img src={googlelogo} alt= "logo" width="191" height="46"></img>
               </button>
               <button onClick={signInWithFacebook} className="auth">
-                <img src={fblogo} width="231" height="41,5"></img>
+                <img src={fblogo} alt="facebook" width="231" height="41,5"></img>
               </button>
-              <button onClick={handleLogin} className="login">
+              <button onClick={handleLogin} alt="login" className="login">
                 Log In
               </button>
               
@@ -75,12 +75,12 @@ const Login = (props) => {
                 </span>
             </p>
               <button onClick={signInWithGoogle} className="auth">
-                <img src={googlelogo} width="191" height="46"></img>
+                <img src={googlelogo} width="191" alt="googlelogo" height="46"></img>
               </button>
               <button onClick={signInWithFacebook} className="auth">
-                <img src={fblogo} width="231" height="41,5"></img>
+                <img src={fblogo} width="231" alt="signin" height="41,5"></img>
               </button>
-              <button onClick={handleSignup} className="login">
+              <button onClick={handleSignup} alt="singup" className="login">
                 Sign up
               </button>
               

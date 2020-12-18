@@ -17,7 +17,7 @@ function Nav(){
     return (
     
     <nav className="navbar">
-        <Link to='/' class="fas fa-chevron-left"></Link>
+        <Link to='/itempage' class="fas fa-chevron-left"></Link>
         <img className="nav-logo" src={logo} alt="logo"/>
         <div className="hamburger">
         <div className='menu-icon' onClick={handleClick}>
