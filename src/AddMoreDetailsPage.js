@@ -3,7 +3,7 @@ import {DropdownCategorySelection, DropdownNumberSelection, DropdownDurationSele
 import {LocationForm} from "./components/FormFields";
 import Nav from './Nav';
 import {Link} from 'react-router-dom';
-
+import {collection} from './fire';
 
 
 const AddMoreDetailsPage= () => {  
@@ -18,30 +18,30 @@ return (
 
     <div className= "additem">
     <p>Category</p>
-    <DropdownCategorySelection
+    <DropdownCategorySelection id="category"
     />
     <br/>
     <p>For how long do you wish to rent out your item? </p>
-    <DropdownNumberSelection
+    <DropdownNumberSelection id="number"
     />
     <br/>
-    <DropdownDurationSelection
+    <DropdownDurationSelection id="duration"
     />
     <br/>
     <p>Delivery method (physical pick-up or mail)</p>
-    <DropdownDeliverySelection
+    <DropdownDeliverySelection id="delivery"
     />
     <br/>
     <p>Condition of the item</p>
-    <DropdownConditionSelection
+    <DropdownConditionSelection id="condition"
     />
     <br/>
-    <LocationForm
+    <LocationForm id="location"
     />
 
   </div>
   <div className='btnContainer'>
-  <Link to="/itemadded"><button>Upload Item</button></Link>
+  <Link to="/itemadded" onClick={UpdateItem}><button>Upload Item</button></Link>
   </div>
 </div>
 </section>
@@ -49,4 +49,33 @@ return (
 );
 };
 
+const UpdateItem= () => {
+
+  const id = localStorage.getItem("id");
+  const category = document.querySelector("#category div").innerHTML;
+  const number = document.querySelector("#number div").innerHTML;
+  const duration = document.querySelector("#duration div").innerHTML;
+  const delivery = document.querySelector("#delivery div").innerHTML;
+  const condition = document.querySelector("#condition div").innerHTML;
+  const location = document.querySelector("#location").value;
+
+    console.log("update " + id + " to Firestore");
+    collection.doc(id).update({
+        Category: category,
+        Number: number,
+        Duration: duration, 
+        Delivery: delivery,
+        Condition: condition, 
+        Location: location,
+
+    }).then(function() {
+        console.log("Status saved!");
+    }).catch(function (error) {
+        console.log("Got an error " + error);
+    });
+  
+} 
+
 export default AddMoreDetailsPage;
+
+

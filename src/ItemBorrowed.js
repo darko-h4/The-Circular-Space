@@ -1,11 +1,11 @@
 import React from "react";
 import {Link} from 'react-router-dom';
-import ItemCard from './ItemCard';
 import "./App.css";
 import Nav from './Nav.js';
 
 
 const ItemBorrowed= () => {  
+  
     return (
     <section className='main'>
     <div className='mainContainer'>
@@ -19,9 +19,6 @@ const ItemBorrowed= () => {
         </h3>
       </div>
       
-      <div>
-        <ItemCard/>
-      </div>
       
         <div className="btnContainer">
       <Link to="/itempage"><button>Back to Items</button></Link>

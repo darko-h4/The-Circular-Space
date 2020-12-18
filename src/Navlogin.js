@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from './images/logo.jpeg';
 import './App.css';
 
 
 function Navlogin({ handleLogout }){
-    const [click, setClick] = useState(false);
-    const handleClick = () => setClick(!click);
-    const closeNavMenu = () => setClick(false);
+    // const [click, setClick] = useState(false);
+    // const handleClick = () => setClick(!click);
+    // const closeNavMenu = () => setClick(false);
 
     return (
     

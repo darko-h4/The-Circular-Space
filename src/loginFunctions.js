@@ -3,7 +3,6 @@ import Hero from "./hero.js";
 import React, { useState, useEffect } from "react";
 import Login from"./login";
 
-
 const LoginFunctions = () => {
 
 const [user, setUser] = useState("");
