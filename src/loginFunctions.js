@@ -1,7 +1,7 @@
 import fire from "./fire.js";
 import Hero from "./hero.js";
 import React, { useState, useEffect } from "react";
-import Login from"./login"; 
+import Login from"./login";
 
 const LoginFunctions = () => {
 
@@ -99,9 +99,6 @@ useEffect(() => {
         )}
       </div>
     )
-
-    
-
-}
+};
 
 export default LoginFunctions;

@@ -1,9 +1,7 @@
 import React from "react";
 import "./App.css";
-import signInWithFacebook from "./components/facebookprovider";
 import signInWithGoogle from "./components/googleprovider";
 import googlelogo from "./images/googlesignin.png";
-import fblogo from "./images/fblogin.png";
 import Navlogin from './Navlogin';
 
 const Login = (props) => {
@@ -28,21 +26,33 @@ const Login = (props) => {
       <div className='toppage'>
       <h1>Sign-up or Login!</h1>
       </div>
+
+      <div className='btnContainer'>
+      <br/>
+      <button onClick={signInWithGoogle} className="auth">
+                <img src={googlelogo} width="191" height="46" alt='googlelogin'></img>
+              </button>
+    
+      <h4>If you can't login with google, you can login with email below!</h4>
+      </div>
+
       <div className="loginContainer">
-        <p>Email</p>
+        <label>Email</label>
         <input
-          type="text"
+          type="email"
           autoFocus
           required
+          placeholder="E.g. test123@gmail.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <p className="errorMsg">{emailError}</p>
 
-        <p>Password (min 6 characters)</p>
+        <label>Password</label>
         <input
           type="password"
           required
+          placeholder="Min 6 characters"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
@@ -56,13 +66,8 @@ const Login = (props) => {
                   Sign up for a new account!
                 </span>
             </p>
-              <button onClick={signInWithGoogle} className="auth">
-                <img src={googlelogo} alt= "logo" width="191" height="46"></img>
-              </button>
-              <button onClick={signInWithFacebook} className="auth">
-                <img src={fblogo} alt="facebook" width="231" height="41,5"></img>
-              </button>
-              <button onClick={handleLogin} alt="login" className="login">
+             
+              <button className='outline' onClick={handleLogin} >
                 Log In
               </button>
               
@@ -74,13 +79,8 @@ const Login = (props) => {
                   I already have an account!
                 </span>
             </p>
-              <button onClick={signInWithGoogle} className="auth">
-                <img src={googlelogo} width="191" alt="googlelogo" height="46"></img>
-              </button>
-              <button onClick={signInWithFacebook} className="auth">
-                <img src={fblogo} width="231" alt="signin" height="41,5"></img>
-              </button>
-              <button onClick={handleSignup} alt="singup" className="login">
+             
+              <button className='outline' onClick={handleSignup} >
                 Sign up
               </button>
               

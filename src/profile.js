@@ -30,12 +30,13 @@ const Profile = () => {
     <div className='mainContainer'>
       <Nav/>
       <div className='toppage'>
-      <h1>Your Profile</h1>
+      <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
       </div>
       
       <div className="usercard">
-        <h4>Points</h4>
-        <p className='blue'>Location</p>
+      <img alt="profile picture" src={firebase.auth().currentUser.photoURL} />
+        <h4>73 Points</h4>
+        <p className='blue'>København N, 2200</p>
       </div>
 
 
