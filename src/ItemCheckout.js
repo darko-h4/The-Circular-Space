@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {Link} from 'react-router-dom';
 import Nav from './Nav.js';
-import ItemCard from './ItemCard';
 import "./App.css";
 import {NoteField} from "./components/FormFields";
 import {DropdownNumberSelection, DropdownDurationSelection, DropdownDeliverySelection} from "./components/DropdownSelectors";
