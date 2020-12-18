@@ -34,7 +34,6 @@ const Profile = () => {
       </div>
       
       <div className="usercard">
-        <h4>Name</h4>
         <h4>Points</h4>
         <p className='blue'>Location</p>
       </div>

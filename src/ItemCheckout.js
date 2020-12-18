@@ -5,14 +5,11 @@ import ItemCard from './ItemCard';
 import "./App.css";
 import {NoteField} from "./components/FormFields";
 import {DropdownNumberSelection, DropdownDurationSelection, DropdownDeliverySelection} from "./components/DropdownSelectors";
-import {borrowcollection, collection} from './fire';
+import {borrowcollection} from './fire';
 
 
 const ItemAdded= () => {  
-  //const id = localStorage.getItem("id"); //tilføjet
-  //const [Item, setItem] = useState({}); //tilføjet
-  //collection.doc(id).get().then(document => setItem(document.data())); //tilføjet 
-
+ 
     return (
       <section className='main'>
     <div className='mainContainer'>
