@@ -1,6 +1,5 @@
 import React from "react";
 import {Link} from 'react-router-dom';
-import ItemCard from './ItemCard';
 import "./App.css";
 import Nav from './Nav.js';
 
