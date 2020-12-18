@@ -4,7 +4,6 @@ that will be used to receive on loan other stuff.
 Every time that a new user subscribe himself to the platform, he receive 100 points to start
 ###
 
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -73,3 +72,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+Data model
+![data model] (https://lucid.app/lucidchart/e4e76e1e-c8fd-416b-ad6b-45ec66aa59e7/view) 
+
+
