@@ -4,6 +4,9 @@ that will be used to receive on loan other stuff.
 Every time that a new user subscribe himself to the platform, he receive 100 points to start
 ###
 
+Data model
+
+<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embeddedchart/e4e76e1e-c8fd-416b-ad6b-45ec66aa59e7" id="5PlYksZ~CCQi"></iframe></div>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
