@@ -9,10 +9,10 @@ const ItemCard = () => {
         </div>
         
         <div className='itemtext'>
-          <h2> Description </h2>
-          <h4> Points </h4>
+          <h2>Description</h2>
+          <h4>Points</h4>
           <p>Available for</p>
-          <p className='blue'>Location  </p>
+          <p className='blue'>Location</p>
         </div>
 
     </section>

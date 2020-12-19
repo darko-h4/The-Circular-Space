@@ -1,10 +1,8 @@
 import React from "react";
 import {DropdownPointsSelection} from "./components/DropdownSelectors";
 import {ItemNameForm, ItemDescription} from "./components/FormFields";
-
 import Nav from './Nav';
 import {Link} from 'react-router-dom';
-
 import {collection} from './fire';
 
 console.log(collection.get());
@@ -60,5 +58,5 @@ const AddItemPage= () => {
 
   
     
-    export default AddItemPage;
+export default AddItemPage;
 

@@ -50,9 +50,7 @@ const UploadBorrowedItem = () => {
     localStorage.setItem("id", item.id);
     borrowcollection.add({
         Name: item,
-  
-    
-       
+
     })
     .then (result => localStorage.setItem("id", result.id));
         console.log("Status saved!");

@@ -12,13 +12,13 @@ export const Benefits = () => {
     <section className="main">
     <div className="mainContainer">
       <Navlogin/>
-      < div className="toppage">
+      <div className="toppage">
       <h1>1. Benefits</h1>
       </div>
       <div className='text'>
-        <img className='onboarding' src={laptop} alt="laptop" />
+        <img className='onboarding' src={laptop} alt="laptop"/>
         <h2>Why sharing is caring</h2>
-        <p> This platform will allow you to borrow, give away and lend out items for free! You will create your own circular space, in which you help the circular economy.</p>
+        <p>This platform will allow you to borrow, give away and lend out items for free! You will create your own circular space, in which you help the circular economy.</p>
         </div> 
       <div className="btnContainer">
       <Link to="/login"><button> Sign up</button></Link>
@@ -34,11 +34,11 @@ export const Borrow = () => {
     <section className="main">
     <div className="mainContainer">
     <Navlogin/>
-    < div className="toppage">
+    <div className="toppage">
       <h1>2. Borrow Items</h1>
       </div>
       <div className='text'>
-        <img className='onboarding' src={items} alt="items" />
+        <img className='onboarding' src={items} alt="items"/>
         <h2>How to borrow items</h2>
         <p>You can use points to borrow items for a chosen period of time. Just find the product you want, check the availability of the lender and click the ‘borrow item’ button! You will receive 100 points when signing up!</p>
       </div>
@@ -56,13 +56,13 @@ export const Lend = () => {
     <section className="main">
     <div className="mainContainer">
     <Navlogin/>
-    < div className="toppage">
+    <div className="toppage">
       <h1>3. Lend Out Items</h1>
       </div>
       <div className='text'>
-        <img className='onboarding' src={blancitems} alt="items" />
+        <img className='onboarding' src={blancitems} alt="items"/>
         <h2>How to lend out items</h2>
-        <p> Did you borrow many products, and do you want to gain more points? Lend out items catching dust, upload items and receive new points, easy as that.</p>
+        <p>Did you borrow many products, and do you want to gain more points? Lend out items catching dust, upload items and receive new points, easy as that.</p>
       </div>
       <div className="btnContainer">
         <Link to="/login"><button> Sign up</button></Link>

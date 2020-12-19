@@ -67,15 +67,3 @@ localStorage.setItem("id", item.id);
 
 
 export default RenderItems;
-
-/*   
-      
-
-        <Link to="/ItemProfile"><ItemCard/></Link>
-        <Link to="/ItemProfile"><ItemCard/></Link>
-        <Link to="/ItemProfile"><ItemCard/></Link>
-        <Link to="/ItemProfile"><ItemCard/></Link>
-        <Link to="/ItemProfile"><ItemCard/></Link>
-        <Link to="/ItemProfile"><ItemCard/></Link>
-               
-    */

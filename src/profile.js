@@ -1,13 +1,11 @@
 import React, {useState, useEffect} from "react";
-import picture from "./images/profile.jpg";
 import {Link} from "react-router-dom";
 import Nav from './Nav';
-import ItemCard from "./ItemCard";
 import {fire} from './fire';
 
 
 const Profile = () => {
-  const [BorrowedItems, setItems] = useState([]); //tilføjet
+  const [BorrowedItems, setItems] = useState([]); 
 
   const ref = fire.firestore().collection("BorrowedItems");
 
@@ -30,11 +28,11 @@ const Profile = () => {
     <div className='mainContainer'>
       <Nav/>
       <div className='toppage'>
-      <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
+      <h1>Welcome {fire.auth().currentUser.displayName}</h1>
       </div>
       
       <div className="usercard">
-      <img alt="profile picture" src={firebase.auth().currentUser.photoURL} />
+      <img alt="profile picture" src={fire.auth().currentUser.photoURL} />
         <h4>73 Points</h4>
         <p className='blue'>København N, 2200</p>
       </div>
@@ -54,7 +52,7 @@ const Profile = () => {
              <ul key={item.id}>
                  <div className='itemtext'>
                <h2>{item.Name}</h2>
-               <p> Available for {item.Number} {item.Duration}</p> 
+               <p>Available for {item.Number} {item.Duration}</p> 
                <p className='blue'> {item.Location} </p>
                </div>
                </ul>
