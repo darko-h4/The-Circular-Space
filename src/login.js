@@ -52,7 +52,7 @@ const Login = (props) => {
         <input
           type="password"
           required
-          placeholder="Min 6 characters"
+          placeholder="Minimum 6 characters"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />

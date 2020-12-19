@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {Link} from 'react-router-dom';
 import Nav from './Nav.js';
 import "./App.css";
@@ -54,7 +54,7 @@ const ItemAdded= () => {
       const number = document.querySelector("#number div").innerHTML;
       const duration = document.querySelector("#duration div").innerHTML;
       const delivery = document.querySelector("#delivery div").innerHTML;
-      const notefield =document.querySelector("#notefield").value;
+      const notefield = document.querySelector("#notefield").value;
       
     
         console.log("update " + id + " to Firestore");

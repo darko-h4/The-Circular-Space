@@ -1,12 +1,10 @@
 import React from "react";
 import {Link} from 'react-router-dom';
-import ItemCard from './ItemCard';
 import "./App.css";
 import Nav from './Nav';
-import {collection} from './fire';
 import {fire} from './fire';
 
-async function FecthItems() {
+async function FetchItems() {
 
   const itemRef = fire.collection('Items').doc('id');
 

@@ -21,7 +21,7 @@ return (
     <DropdownCategorySelection id="category"
     />
     <br/>
-    <p>For how long do you wish to rent out your item? </p>
+    <p>For how long do you wish to rent out your item?</p>
     <DropdownNumberSelection id="number"
     />
     <br/>
