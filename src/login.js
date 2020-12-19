@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
-import signInWithGoogle from "./provider";
-import googlelogo from "./googlesignin.png";
+import signInWithGoogle from "./components/googleprovider";
+import googlelogo from "./images/googlesignin.png";
+import Navlogin from './Navlogin';
 
 const Login = (props) => {
   const {
@@ -18,15 +19,30 @@ const Login = (props) => {
   } = props;
 
   return (
-    <section className="login">
-      <h1>Welcome!</h1>
-      <h3>Please login or sign up to continue</h3>
+    <section className="main">
+    <div className="mainContainer">
+      <Navlogin/>
+      
+      <div className='toppage'>
+      <h1>Sign-up or Login!</h1>
+      </div>
+
+      <div className='btnContainer'>
+      <br/>
+      <button onClick={signInWithGoogle} className="auth">
+                <img src={googlelogo} width="191" height="46" alt='googlelogin'></img>
+              </button>
+    
+      <h4>If you can't login with google, you can login with email below!</h4>
+      </div>
+
       <div className="loginContainer">
-        <label>Username</label>
+        <label>Email</label>
         <input
-          type="text"
+          type="email"
           autoFocus
           required
+          placeholder="E.g. test123@gmail.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -36,6 +52,7 @@ const Login = (props) => {
         <input
           type="password"
           required
+          placeholder="Minimum 6 characters"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
@@ -44,34 +61,33 @@ const Login = (props) => {
         <div className="btnContainer">
           {hasAccount ? (
             <>
-              <p>
+            <p>
                 <span onClick={() => setHasAccount(!hasAccount)}>
-                  Sign up for new account!
+                  Sign up for a new account!
                 </span>
-              </p>
-              <button onClick={signInWithGoogle} className="google">
-                <img src={googlelogo} width="191" height="46"></img>
-              </button>
-              <button onClick={handleLogin} className="login">
+            </p>
+             
+              <button className='outline' onClick={handleLogin} >
                 Log In
               </button>
+              
             </>
           ) : (
             <>
-              <p>
+            <p>
                 <span onClick={() => setHasAccount(!hasAccount)}>
                   I already have an account!
                 </span>
-              </p>
-              <button onClick={signInWithGoogle} className="google">
-                <img src={googlelogo} width="191" height="46"></img>
-              </button>
-              <button onClick={handleSignup} className="login">
+            </p>
+             
+              <button className='outline' onClick={handleSignup} >
                 Sign up
               </button>
+              
             </>
           )}
         </div>
+      </div>
       </div>
     </section>
   );
