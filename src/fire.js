@@ -4,15 +4,22 @@ import "firebase/firestore";
 
 //default firebase used to test login
 var firebaseConfig = {
-  apiKey: "AIzaSyBnNf2So17O7NkLyRHI68mDTIJGfNd0ZoM",
-  authDomain: "login-3fad3.firebaseapp.com",
-  databaseURL: "https://login-3fad3.firebaseio.com",
-  projectId: "login-3fad3",
-  storageBucket: "login-3fad3.appspot.com",
-  messagingSenderId: "832964385063",
-  appId: "1:832964385063:web:205b2536dd64fd438fb102",
+    apiKey: "AIzaSyBe-OeEr2qLebNEpkSp9jVsi6eSLQ9nzq8",
+    authDomain: "circular-space-985dd.firebaseapp.com",
+    projectId: "circular-space-985dd",
+    storageBucket: "circular-space-985dd.appspot.com",
+    messagingSenderId: "1068509296256",
+    appId: "1:1068509296256:web:f8ab88903e044a0499d865",
 };
 
 export const fire = firebase.initializeApp(firebaseConfig);
 
+export const firestore = firebase.firestore();
+export const collection = firestore.collection("Items");
+export const borrowcollection = firestore.collection("BorrowedItems");
+export const docRef = collection.doc();
+const admin = require('firebase-admin');
+admin.initializeApp(); 
+
 export default fire;
+
